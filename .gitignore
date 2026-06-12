@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+report/build/
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk

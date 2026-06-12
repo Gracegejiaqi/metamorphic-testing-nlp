@@ -1,0 +1,7 @@
+checklist
+fuzzingbook
+transformers
+torch
+spacy
+pandas
+huggingface_hub[hf_transfer]
