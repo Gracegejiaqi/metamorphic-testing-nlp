@@ -42,11 +42,24 @@ Each run samples a fresh perturbation pipeline and property, builds
 transformation chains for 100 seed tweets, runs the CheckList test, and prints
 representative passing/failing example pairs.
 
+### Chain-length sweep
+
+```bash
+python -m experiments.chain_length_sweep
+```
+
+Builds one long chain per seed and measures the invariance pass-rate (fraction
+of sentences whose predicted label is unchanged from `s0` to `sk`) at every
+prefix length `k`. The resulting curve quantifies the *cumulative drift* the
+report describes — invariance erodes as more perturbations compound — and is
+saved to `experiments/chain_length_sweep.png`.
+
 ## Repository layout
 
 | Path | Description |
 | --- | --- |
 | `metamorphic_testing.py` | Full pipeline: data loading, grammars, chain construction, CheckList integration, qualitative analysis |
+| `experiments/chain_length_sweep.py` | Invariance pass-rate vs. chain length (cumulative-drift experiment) |
 | `report/report.pdf` | Project report (method, experiments, comparison with original CheckList, limitations) |
 | `report/main.tex` | LaTeX source of the report |
 

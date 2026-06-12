@@ -4,4 +4,5 @@ transformers
 torch
 spacy
 pandas
+matplotlib
 huggingface_hub[hf_transfer]
